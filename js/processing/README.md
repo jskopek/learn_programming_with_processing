@@ -1,0 +1,50 @@
+# Sources:
+
+processing.js: Via http://processingjs.org/download/
+processing-helper.js: Via http://processingjs.org/tools/processing-helper.html
+
+# Simplest Example
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Processing.js</title>
+        <script src="processing.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+        <style>
+            canvas#sketch {
+                width: 100px;
+                height: 100px;
+                border: 1px solid
+            }
+            textarea#code, textarea#output {
+                width: 90%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Processing Helper</h2>
+            <p>Paste your Processing code below and execute whichever options you require:</p>
+
+            <h2>Processing Code</h2>
+            <textarea rows="20" cols="80" id="code"></textarea>
+            <br>
+            <input onclick="runSketch();" type="button" value="Run"></input>
+            <input onclick="convertToJS();" type="button" value="Convert to JS"></input>
+            <input onclick="generateDataURI();" type="button" value="Generate Data URI"></input>
+
+            <h2>Canvas</h2>
+            <div id="sketch-container">
+                <canvas id="sketch"></canvas>
+            </div>
+
+            <h2>Output</h2>
+            <textarea rows="20" cols="80" id="output" readonly="readonly">None.</textarea>
+
+            <script src="processing-helper.js"></script>
+    </body>
+</html>
+```
